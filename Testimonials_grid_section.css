@@ -1,0 +1,234 @@
+/* Контейнер для всей сетки */
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.barlow-semi-condensed-thin {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-extralight {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-light {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-regular {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-bold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-extrabold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-black {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-thin-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-extralight-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-light-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-regular-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-medium-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-semibold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-bold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-extrabold-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-semi-condensed-black-italic {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+
+
+.a{
+    font-weight: 500;
+}
+.testimonial-grid {
+  display: grid;
+  /* Создаем 4 колонки равной ширины */
+  grid-template-columns: repeat(4, 1fr); 
+  /* Автоматическая высота строк в зависимости от контента */
+  grid-auto-rows: minmax(150px, auto); 
+  /* Расстояние между карточками */
+  gap: 24px; 
+  padding: 20px;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.card-header {
+  display: flex;
+  align-items: center; /* Центрируем аватарку и текст по вертикали */
+  gap: 16px;           /* Отступ между аватаркой и текстом */
+  margin-bottom: 16px; /* Отступ от шапки до главного текста цитаты */
+}
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  /* Для фиолетовой и темной карточек добавляем рамку, как в оригинале */
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column; /* Выстраиваем имя и статус строго вертикально */
+  gap: 4px;               /* Минимальное расстояние между именем и статусом */
+}
+/* Общие стили для карточек (для красоты) */
+.card {
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 35px 25px -15px rgba(0, 0, 0, 0.2);
+}
+h4{
+    font-weight: 600;
+}
+.name {
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;         /* Убираем лишние отступы строк */
+  margin: 0;              /* Сбрасываем дефолтные маржины h3 */
+}
+
+/* Статус выпускника */
+.ve {
+    font-weight: 500;
+  font-size: 11px;
+  opacity: 0.5;           /* Делаем статус чуть прозрачнее, как в дизайне */
+}
+
+
+/* У Даниэля (фиолетовая карточка) — рамка белая */
+.card-purple .avatar {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* У Патрика (темно-синяя карточка) — рамка лиловая */
+.card-dark-blue .avatar {
+  border: 2px solid #a775f1;
+}
+
+
+/* Позиционирование конкретных карточек */
+
+/* 1. Фиолетовая: начинается с 1-й колонки и растягивается на 2 */
+.card-purple {
+  grid-column: span 2; 
+  background-color: #7541c8;
+  color: white;
+  /* Для фоновой кавычки */
+  background-image: url('./images/bg-pattern-quotation.svg'); 
+  background-repeat: no-repeat;
+  background-position: top 0 right 10%;
+}
+
+/* 2. Серая карточка */
+.card-gray {
+  grid-column: span 1;
+  background-color: #48556a;
+  color: white;
+}
+
+/* 3. Длинная белая карточка справа (Кира) */
+.card-white-two {
+  /* Занимает 4-ю колонку */
+  grid-column: 4; 
+  /* Начинается с 1-й строки и растягивается на 2 строки вниз */
+  grid-row: 1 / span 2; 
+  background-color: white;
+  color: #48556a;
+}
+
+/* 4. Маленькая белая карточка снизу (Жанетт) */
+.card-white-one {
+  grid-column: span 1;
+  background-color: white;
+  color: #48556a;
+
+}
+.card-white .ve {
+  color: #48556a;
+  opacity: 0.5;
+}
+
+/* 5. Темно-синяя карточка внизу */
+.card-dark-blue {
+  grid-column: span 2;
+  background-color: #19212e;
+  color: white;
+}
